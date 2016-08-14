@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load ratings %}
+
+{% block content %}
+    <h1>{{ object }}</h1>
+    <h1>{{ object.bar }}</h1>
+    <a href="{% url "query" object.user.username %}">{{ object.user.username }}</a>
+    <img src="/media/{{ object.photo }}" height=100px>
+    {% ratings object %}
+{% endblock content %}

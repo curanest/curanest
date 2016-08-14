@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% load bootstrap3 %}
+{% load ratings %}
+
+{% block content %}
+
+<div class="container">
+
+{% for hospital in hospitals %}
+
+<div class="row">
+  <div class="col-xs-12 col-md-8">
+  <h1><a href="{% url "hospital_view" hospital.user.username %}">{{ hospital.user.username }}</a></h1>
+<img src="/media/{{ hospital.photo }}" height=100px>
+Id: {{ hospital.user_id }}
+<br/>
+Call : {{ hospital.mobilenumber }}
+</div>
+<div class="col-xs-6 col-md-4">{% ratings hospital %}
+<a href="{% url "query" hospital.user.username %}">Query</a>
+</div>
+</div>
+
+<br/>
+<hr/>
+{% endfor %}
+</div>
+{% endblock %}

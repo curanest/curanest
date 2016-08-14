@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load bootstrap3 %}
+
+{% block content %}
+
+<div class="container" style="padding-top:10%">
+
+<h1>Create an account</h1>  
+<p>Please, sign up using the following form:</p>
+ <form action="." method="post" class="form">    
+ 	{% bootstrap_form user_form %}  
+ 	{% csrf_token %} 
+ 	{% buttons %}   
+ 	<button type="submit" class="btn btn-primary">  
+ 		 {% bootstrap_icon "star" %} Submit
+    </button>
+ 	{% endbuttons %}
+ </form>
+ </div> 
+
+ {% endblock %}
