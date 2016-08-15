@@ -131,11 +131,11 @@
 										<!-- End Column Pages -->
 
 										<!-- Privacy Policy -->
-										<li><a href="page_privacy.html">Profile</a></li>
+										<li><a href="{% url "edit" %}">Edit Profile</a></li>
 										<!-- End Privacy Policy -->
 
 										<!-- Terms of Service -->
-										<li><a href="page_terms.html">Logout</a></li>
+										<li><a href="{% url "django.contrib.auth.views.logout" %}?next=/">Logout</a></li>
 										<!-- End Terms of Service -->
 
 										<!-- Sub Level Menu -->

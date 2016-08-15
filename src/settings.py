@@ -113,9 +113,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 from django.core.urlresolvers import reverse_lazy
 
-LOGIN_REDIRECT_URL = reverse_lazy('dashboard') 
+LOGIN_REDIRECT_URL = reverse_lazy('/') 
 LOGIN_URL = reverse_lazy('login') 
 LOGOUT_URL = reverse_lazy('logout')
+LOGOUT_REDIRECT_URL = '/'
+
 
 EMAIL_HOST = 'smtp.gmail.com' 
 EMAIL_HOST_USER = 'curanest@gmail.com' 
@@ -127,3 +129,5 @@ from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
 TEMPLATE_CONTEXT_PROCESSORS += (
      'django.core.context_processors.request',
 )
+
+STAR_RATINGS_RERATE = True
