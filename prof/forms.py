@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Query, NewAgentQuery, PatientProfile, PatientInfo, ContactUs, QueryImages #, Image
+from .models import Query, AgentQuery, NewAgentQuery, PatientProfile, PatientInfo, ContactUs, QueryImages #, Image
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -52,6 +52,12 @@ class ContactUsForm(forms.ModelForm):
     class Meta:
         model = ContactUs
         fields = '__all__'
+
+class RESTAgentQueryForm(forms.ModelForm):
+    class Meta:
+        model = AgentQuery
+        exclude = ['agent']
+
 
 class AgentQueryForm(forms.ModelForm):
     class Meta:

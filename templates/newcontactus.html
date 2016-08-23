@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 
+{% load rest_framework %}
 {% load bootstrap3 %}
 
 {% block content %}
-<div class="container" style="padding-top:10%">
-<form action="/api/contactus/" method="post" class="form">
+<div class="container">
+<form action="." method="post" class="form">
 
     {% bootstrap_form form %} 
     {% csrf_token %} 
+    {% render_form serializer %}
     {% buttons %}
     <button type="submit" class="btn btn-primary">  
  		 {% bootstrap_icon "star" %} Submit Query

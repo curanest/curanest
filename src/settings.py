@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'prof',
     'bootstrap3',
     'star_ratings',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -113,7 +114,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 from django.core.urlresolvers import reverse_lazy
 
-LOGIN_REDIRECT_URL = reverse_lazy('/') 
+LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = reverse_lazy('login') 
 LOGOUT_URL = reverse_lazy('logout')
 LOGOUT_REDIRECT_URL = '/'

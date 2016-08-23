@@ -81,17 +81,15 @@ class PatientInfo(models.Model):
     email = models.EmailField(max_length=30)
     mobilenumber = models.CharField(max_length=15)
 
-
-####WARNING - NOT USED
 class AgentQuery(models.Model):
-    pass
-    # user = models.ForeignKey(AgentProfile,related_name='new_queries')
-    # message = models.TextField()
-    # email = models.EmailField(max_length=30)
-    # mobilenumber = models.CharField(max_length=15)
+    agent = models.ForeignKey(AgentProfile,related_name='queries')
+    message = models.TextField()
+    name = models.CharField(max_length=25)
+    email = models.EmailField(max_length=30)
+    mobilenumber = models.CharField(max_length=15)
     
-    # def __unicode__(self):
-    #     return self.mobilenumber
+    def __unicode__(self):
+        return self.mobilenumber
 
 class NewAgentQuery(models.Model):
     pass

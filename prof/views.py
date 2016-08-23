@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
 from django.forms import inlineformset_factory
-from .models import Query, AgentQuery, PatientProfile, PatientInfo, AgentProfile, HospitalProfile, HospitalQuery, QueryImages #, Image
-from .forms import QueryForm, QueryImageForm, AgentQueryForm, EmailPhoneForm, ProfileEditForm, PatientProfileEditForm,  UserRegistrationForm, MailForm, ContactUsForm
+from .models import Query, AgentQuery, PatientProfile, PatientInfo, AgentProfile, HospitalProfile, HospitalQuery, QueryImages, ContactUs #, Image
+from .forms import QueryForm, QueryImageForm, AgentQueryForm, RESTAgentQueryForm, EmailPhoneForm, ProfileEditForm, PatientProfileEditForm,  UserRegistrationForm, MailForm, ContactUsForm
  #,ImageForm
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
@@ -12,6 +12,13 @@ from django.views.generic import DetailView, TemplateView
 from django.shortcuts import get_object_or_404
 from django.forms import modelformset_factory
 
+from rest_framework import viewsets
+from rest_framework.renderers import TemplateHTMLRenderer
+from rest_framework.response import Response
+from .Serializers import ContactusSerializers, AgentQuerySerializers
+from rest_framework.views import APIView
+from django.shortcuts import get_object_or_404
+from rest_framework.decorators import api_view
 
 class HospitalProfileView(DetailView):
     model = HospitalProfile
@@ -35,6 +42,11 @@ class HospitalProfileView(DetailView):
 #         print 'SizesView'
 #         kwargs['sizes'] = {size: self.model.objects.get_or_create(bar=str(size))[0] for size in range(10, 40)}
 #         return super(SizesView, self).get_context_data(**kwargs)
+
+def agentquery(request):
+    form = RESTAgentQueryForm()
+    return render(request, 'agentquery.html', locals()) 
+
 
 def query(request,hospital=None):
     
@@ -228,10 +240,10 @@ def query(request,hospital=None):
 #         return render(request, 'query.html', locals())
 
 def show_hospitals(request):
-    print 'HospitalProfile'
-    print Query.objects.all()
-    pp = PatientProfile.objects.get(user=request.user)
-    print pp.queries.all()
+    #print 'HospitalProfile'
+    #print Query.objects.all()
+    #pp = PatientProfile.objects.get(user=request.user)
+    #print pp.queries.all()
 
     hospitals = HospitalProfile.objects.all()
     return render(request, 'hospitals.html', locals())
@@ -330,3 +342,53 @@ def contact_us(request):
 def ratings_vote(request):
     #handler = ratings.get_handler(HospitalProfile)
     return render(request,'done.html',locals())
+
+# class Contactusviewset(APIView):
+#     print 'Contactusviewset'
+#     renderer_classes = [TemplateHTMLRenderer]
+#     template_name = 'newcontactus.html'
+
+#     def get(self, request, formet=None):
+#         print 'Again'
+#         contactus = get_object_or_404(ContactUs)
+#         serializer = ContactusSerializers(contactus)
+#         return Response({'serializer': serializer, 'contactus': contactus})
+
+#     def post(self, request, format=None):
+#         contactus = get_object_or_404(ContactUs)
+#         serializer = ContactusSerializer(contactus, data=request.data)
+#         if not serializer.is_valid():
+#             return Response({'serializer': serializer, 'contactus': contactus})
+#         serializer.save()
+#         return redirect('profile-list')
+
+
+# class Contactusviewset(APIView):
+#     print 'Here am I'
+#     queryset = ContactUs.objects.all()
+#     serializer_class = ContactusSerializers
+    
+#     def get(self):
+#         contact = ContactUs.objects.all()
+#         serializer = ContactusSerializers(contact,many=True)
+#         return Response(serializer.data)
+        
+#     def post(self):
+#         pass
+
+
+class Contactusviewset(viewsets.ModelViewSet):
+    queryset = ContactUs.objects.all()
+    serializer_class = ContactusSerializers
+    # renderer_classes = (TemplateHTMLRenderer,)
+
+#from rest_framework.decorators import api_view
+
+# @api_view(['GET','POST'])
+# def submitquery(request):
+#     print 'Test'
+#     return Response({"message": "Hello, world!"})
+
+class Queryviewset(viewsets.ModelViewSet):
+    queryset = AgentQuery.objects.all()
+    serializer_class = AgentQuerySerializers

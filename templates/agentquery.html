@@ -4,9 +4,12 @@
 
 {% block content %}
 <div class="container" style="padding-top:10%">
-<form action="/api/contactus/" method="post" class="form">
+<form action="/api/query/" method="post" class="form" enctype="multipart/form-data">
 
-    {% bootstrap_form form %} 
+    {% bootstrap_form form %}
+    {% if form2 %}
+       {% bootstrap_form form2 %}
+    {% endif %}
     {% csrf_token %} 
     {% buttons %}
     <button type="submit" class="btn btn-primary">  

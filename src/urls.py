@@ -6,10 +6,20 @@ from prof import views as profviews
 #from prof import HospitalProfileView, SizesView
 from django.contrib.auth import views as auth_views
 
+from rest_framework import routers
+from prof.views import Contactusviewset,Queryviewset
+router = routers.SimpleRouter()
+
+router.register(r'contactus',Contactusviewset)
+router.register(r'query',Queryviewset)
+
 urlpatterns = [
+    
+    url(r'^api/', include(router.urls)),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^query/$', profviews.query, name='query'),
+    url(r'^agentquery/$', profviews.agentquery, name='agent_query'),
     url(r'^query/(?P<hospital>\w+)/$', profviews.query, name='query'),
     #url(r'^query/(?P<hospital>\w+)/', profviews.query, name='query_o'),
     url(r'^login/$', 'django.contrib.auth.views.login', name='login'),    

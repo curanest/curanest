@@ -30,6 +30,11 @@ class Migration(migrations.Migration):
             name='AgentQuery',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('message', models.TextField()),
+                ('name', models.CharField(max_length=25)),
+                ('email', models.EmailField(max_length=30)),
+                ('mobilenumber', models.CharField(max_length=15)),
+                ('agent', models.ForeignKey(to='prof.AgentProfile')),
             ],
         ),
         migrations.CreateModel(
