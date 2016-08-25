@@ -87,9 +87,13 @@ class AgentQuery(models.Model):
     name = models.CharField(max_length=25)
     email = models.EmailField(max_length=30)
     mobilenumber = models.CharField(max_length=15)
+    photo = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True)
+    upload = models.FileField(upload_to='uploads/%Y/%m/%d/')
     
     def __unicode__(self):
         return self.mobilenumber
+
+
 
 class NewAgentQuery(models.Model):
     pass

@@ -390,5 +390,7 @@ class Contactusviewset(viewsets.ModelViewSet):
 #     return Response({"message": "Hello, world!"})
 
 class Queryviewset(viewsets.ModelViewSet):
+    print 'Submit'
     queryset = AgentQuery.objects.all()
+    print queryset
     serializer_class = AgentQuerySerializers
