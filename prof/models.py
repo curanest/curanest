@@ -94,7 +94,6 @@ class AgentQuery(models.Model):
         return self.mobilenumber
 
 
-
 class NewAgentQuery(models.Model):
     pass
     # user = models.ForeignKey(AgentProfile,related_name='agent_queries')
@@ -132,3 +131,11 @@ class ContactUs(models.Model):
 
     def __unicode__(self):
         return self.subject + ' ' + self.mobilenumber  
+
+class SomeInfo(models.Model):
+    name = models.CharField(max_length=30)
+    message = models.TextField()
+
+    def __unicode__(self):
+        return self.name + ' ' + self.message
+        
