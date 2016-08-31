@@ -1,6 +1,8 @@
 from rest_framework.generics import ListAPIView,RetrieveAPIView,DestroyAPIView,UpdateAPIView,CreateAPIView
 from prof.models import ContactUs,AgentProfile,AgentQuery
-from .serializers import ContactUsSerializer, AgentQueryCreateSerializer
+from .serializers import ContactUsSerializer, AgentQueryCreateSerializer, AgentProfileCreateSerializer
+from django.contrib.auth.models import User
+import random
 
 class ContactUsListAPIView(ListAPIView):
 	queryset = ContactUs.objects.all()
@@ -35,3 +37,13 @@ class AgentQueryCreateAPIView(CreateAPIView):
 		agent = AgentProfile.objects.get(user=self.request.user)
 		print agent
 		serializer.save(agent=agent)
+
+class AgentProfileCreateAPIView(CreateAPIView):
+	queryset = AgentProfile.objects.all()
+	serializer_class = AgentProfileCreateSerializer
+
+	def perform_create(self,serializer):
+		serializer.is_valid()
+		print serializer.validated_data
+		user = User.objects.create_user('name121'+str(random.randint(1,100)),'email112'+ str(random.randint(1,100)) +'@gmail.com','password')
+		serializer.save(user=user)

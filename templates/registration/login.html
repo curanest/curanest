@@ -6,7 +6,7 @@
 <div class="container">
  <h1>Log-in</h1>  
  <p>Please, use the following form to log-in:</p>  
- <form action="." method="post" class="form">
+ <form action="/rest-auth/login/" method="post" class="form">
     {% bootstrap_form form %}      
  	{% csrf_token %}    
  	{% buttons %}   
