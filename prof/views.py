@@ -377,20 +377,20 @@ def ratings_vote(request):
 #         pass
 
 
-class Contactusviewset(viewsets.ModelViewSet):
-    queryset = ContactUs.objects.all()
-    serializer_class = ContactusSerializers
-    # renderer_classes = (TemplateHTMLRenderer,)
+# class Contactusviewset(viewsets.ModelViewSet):
+#     queryset = ContactUs.objects.all()
+#     serializer_class = ContactusSerializers
+#     # renderer_classes = (TemplateHTMLRenderer,)
 
-#from rest_framework.decorators import api_view
+# #from rest_framework.decorators import api_view
 
-# @api_view(['GET','POST'])
-# def submitquery(request):
-#     print 'Test'
-#     return Response({"message": "Hello, world!"})
+# # @api_view(['GET','POST'])
+# # def submitquery(request):
+# #     print 'Test'
+# #     return Response({"message": "Hello, world!"})
 
-class Queryviewset(viewsets.ModelViewSet):
-    print 'Submit'
-    queryset = AgentQuery.objects.all()
-    print queryset
-    serializer_class = AgentQuerySerializers
+# class Queryviewset(viewsets.ModelViewSet):
+#     print 'Submit'
+#     queryset = AgentQuery.objects.all()
+#     print queryset
+#     serializer_class = AgentQuerySerializers

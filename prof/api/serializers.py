@@ -16,3 +16,8 @@ class AgentQueryCreateSerializer(ModelSerializer):
     class Meta:
         model = AgentQuery
         exclude = ('agent',)
+
+class AgentProfileCreateSerializer(ModelSerializer):
+    class Meta:
+        model = AgentQuery
+        exclude = ('user',)

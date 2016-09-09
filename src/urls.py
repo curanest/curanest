@@ -2,12 +2,14 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+
 from prof import views as profviews
 #from prof import HospitalProfileView, SizesView
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     url(r'^api/',include("prof.api.urls", namespace='api')),
+    url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^query/$', profviews.query, name='query'),
     url(r'^agentquery/$', profviews.agentquery, name='agent_query'),

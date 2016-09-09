@@ -6,7 +6,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<title>Creative | Unify - Responsive Website Template</title>
+	<title>Curanest - With you Always</title>
 
 	<!-- Meta -->
 	<meta charset="utf-8">
@@ -22,53 +22,58 @@
 
 	<!-- CSS Global Compulsory -->
 	<link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/plugins/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/css/style.css">
+	<link rel="stylesheet" href="static/css/style.css">
 
 	<!-- CSS Header and Footer -->
 	<link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/css/headers/header-v6.css">
 	<link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/css/footers/footer-v1.css">
 
 	<!-- CSS Implementing Plugins -->
-	<link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/plugins/animate.css">
+	<!-- <link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/plugins/animate.css"> -->
 	<link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/plugins/line-icons/line-icons.css">
-	<link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/plugins/font-awesome/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/plugins/font-awesome/css/font-awesome.min.css"> -->
 	<link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/plugins/revolution-slider/rs-plugin/css/settings.css" type="text/css" media="screen">
+
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
 	<!--[if lt IE 9]><link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.css" type="text/css" media="screen"><![endif]-->
 
 	<!-- CSS Theme -->
-	<link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/css/theme-colors/default.css" id="style_color">
-	<link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/css/theme-skins/dark.css">
+	<!-- <link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/css/theme-colors/default.css" id="style_color"> -->
+	<link rel="stylesheet" href="static/css/dark.css">
 
-	<!-- CSS Customization -->
-	<link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/css/custom.css">
+	<!-- CSS Customization
+	<link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/css/custom.css"> -->
 </head>
 
 <body class="header-fixed">
 	<div class="wrapper">
 		<!--=== Header v6 ===-->
-		<div class="header-v6 header-classic-white header-sticky">
+		<div class="header-v6 header-sticky">
 			<!-- Navbar -->
-			<div class="navbar mega-menu" role="navigation">
+			<div class="navbar" role="navigation">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="menu-container">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+						<!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
-						</button>
+						</button> -->
 
 						<!-- Navbar Brand -->
-						<div class="navbar-brand">
+						<div class="navbar-brand brand-name">
 							<a href="index.html">
-								<img class="shrink-logo" src="http://htmlstream.com/preview/unify-v1.9.5/assets/img/logo1-default.png" alt="Logo">
+								<img src="static/img/curanestlogo.png" alt="Logo"><span style="color:#7CC5E3; font-family: 'Josefin Slab', serif;font-size:1.4em; font-weight: bold;"><span style="color:#5F99B0">cura</span>Nest</span>
 							</a>
 						</div>
 						<!-- ENd Navbar Brand -->
 
 						<!-- Header Inner Right -->
-						<div class="header-inner-right">
+<!-- 						<div class="header-inner-right">
 							<ul class="menu-icons-list">
 								<li class="menu-icons shopping-cart">
 									<i class="menu-icons-style radius-x fa fa-shopping-cart"></i>
@@ -86,8 +91,8 @@
 									</div>
 								</li>
 							</ul>
-						</div>
-						<!-- End Header Inner Right -->
+						</div> -->
+						
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
@@ -95,17 +100,17 @@
 						<div class="menu-container">
 							<ul class="nav navbar-nav">
 								<!-- Home -->
-								<li>
+								<!-- <li>
 									<a href="{% url "dashboard" %}">Home</a>
-								</li>	
+								</li> -->	
 								<!-- End Home -->
 								<!-- Features -->
 									<li>
 									   <a href="{% url "query" %}">Query</a>
 									</li>
-									<li>
+									<!-- <li>
 									   <a href="{% url "hospitals" %}">Hospitals</a>
-									</li>
+									</li> -->
 									<li>
 									   <a href="{% url "contactus" %}">Contact</a>
 									</li>
@@ -144,9 +149,9 @@
 										
 									</ul>
 									{% else %}
-									<li>
+									<!-- <li>
 									    <a href="{% url "register" 'broker' %}"><b><u>HealthCare Agent</u></b></a>
-									</li>
+									</li> -->
 									<li>
 									    <a href="{% url "register" 'patient' %}">Get Started</a>
 									</li>
@@ -174,7 +179,7 @@
 
 		<div class="container content-sm">
 		<div class="text-center margin-bottom-50">
-		<h2 class="title-v2 title-center">WE ARE UNIFY AGENCY</h2>
+		<h2 class="title-v2 title-center">Curanest</h2>
 		<p class="space-lg-hor">If you are going to use a <span class="color-green">passage of Lorem Ipsum</span>, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making <span class="color-green">this the first</span> true generator on the Internet.</p>
 		</div>
 
@@ -211,7 +216,8 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="responsive-video margin-bottom-30">
-							<iframe src="http://player.vimeo.com/video/47911018" width="530" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+							<iframe src="https://www.youtube.com/watch?v=p-ObJ1taGPk"
+   width="560" height="315" frameborder="0" allowfullscreen></iframe>
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -227,7 +233,7 @@
 
 		<div class="container content-sm">
 			<div class="text-center margin-bottom-50">
-				<h2 class="title-v2 title-center">READ ABOUT UNIFY</h2>
+				<h2 class="title-v2 title-center">READ ABOUT Curanest</h2>
 				<p class="space-lg-hor">If you are going to use a passage of Lorem Ipsum, <span class="color-green">you need to</span> be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true <span class="color-green">generator</span> on the Internet.</p>
 			</div>
 
@@ -250,7 +256,7 @@
 							<img class="img-responsive" src="http://htmlstream.com/preview/unify-v1.9.5/assets/img/masonry/blog3.jpg" alt="">
 						</div>
 						<div class="caption">
-							<h3><a href="#">Engage Customers With Unify</a></h3>
+							<h3><a href="#">Engage Customers With Curanest</a></h3>
 							<p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text, all the  ipsum generators.</p>
 							<p><a class="read-more" href="#">See More</a></p>
 						</div>
