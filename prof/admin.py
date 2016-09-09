@@ -1,8 +1,8 @@
 from django.contrib import admin
 from .models import PatientProfile, AgentProfile, HospitalProfile, PatientInfo, Query, AgentQuery, NewAgentQuery, HospitalQuery, HospitalImages, QueryImages, ContactUs
-from ratings.handlers import ratings, RatingHandler
-from ratings.forms import StarVoteForm
-from ratings.forms import SliderVoteForm
+# from ratings.handlers import ratings, RatingHandler
+# from ratings.forms import StarVoteForm
+# from ratings.forms import SliderVoteForm
 
 class QueriesInLine(admin.TabularInline):
     model = Query
@@ -77,4 +77,4 @@ admin.site.register(HospitalImages)
 admin.site.register(QueryImages)
 admin.site.register(ContactUs)
 admin.site.register(PatientInfo)
-ratings.register(HospitalProfile,score_range=(1, 10), form_class=SliderVoteForm)
+#ratings.register(HospitalProfile,score_range=(1, 10), form_class=SliderVoteForm)
