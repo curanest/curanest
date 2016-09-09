@@ -1,4 +1,5 @@
 from rest_framework.serializers import ModelSerializer
+from django.contrib.auth.models import User
 
 from prof.models import ContactUs, AgentProfile, AgentQuery
 
@@ -19,9 +20,5 @@ class AgentQueryCreateSerializer(ModelSerializer):
 
 class AgentProfileCreateSerializer(ModelSerializer):
     class Meta:
-#<<<<<<< HEAD
-        model = AgentQuery
-# =======
-#         model = AgentProfile
-# >>>>>>> ef57d6dfc36652db4fb58388a8d5887316b505f7
-#         exclude = ('user',)
+        model = AgentProfile
+        exclude = ('user',)
