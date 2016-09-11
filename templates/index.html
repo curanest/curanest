@@ -1,7 +1,9 @@
 {% extends "base.html" %}
-
+{% load djng_tags %}    
 
 {% block content %}
+
+
    <div class="tp-banner-container">
             <div class="tp-banner">
                 <ul>
@@ -20,7 +22,7 @@
                         data-easing="Back.easeInOut"
                         data-endeasing="Power1.easeIn"
                         data-endspeed="300">
-                        <span style="color:#7CC5E3;font-family: 'Quicksand', sans-serif;"><span style="color:#5F99B0">cura</span>Nest</span>
+                        <span style="color:#7CC5E3;font-family: 'Quicksand', sans-serif; letter-spacing: 1px;"><span style="color:#5F99B0">cura</span>Nest</span>
                         </div>
                         <!-- END LAYER -->
 
@@ -37,8 +39,27 @@
                         data-captionhidden="off"
                         style="z-index: 6">
                         <span style="font-family: 'Open Sans', sans-serif; line-height: 130%;letter-spacing: 2px;">
-                        Take Care of yourself,<br>
-                        Let us help you with the rest
+                        {% angularjs %}
+                        {{ctrl.message1}}
+                        {% endangularjs %}
+                        </span>
+                        </div>
+                        <!-- END LAYER -->
+                        <div class="tp-caption re-text-v1 sft"
+                        data-x="center"
+                        data-hoffset="0"
+                        data-y="190"
+                        data-speed="1400"
+                        data-start="2000"
+                        data-easing="Power4.easeOut"
+                        data-endspeed="300"
+                        data-endeasing="Power1.easeIn"
+                        data-captionhidden="off"
+                        style="z-index: 6">
+                        <span style="font-family: 'Open Sans', sans-serif; line-height: 130%;letter-spacing: 2px;">
+                        {% angularjs %}
+                        {{ctrl.message2}}
+                        {% endangularjs %}
                         </span>
                         </div>
                         <!-- END LAYER -->
@@ -55,7 +76,8 @@
                         data-endeasing="Power1.easeIn"
                         data-captionhidden="off"
                         style="z-index: 6">
-                        <img src="static/img/hospital.png" width="100"/>
+                        <a href="#">
+                        <img class="features" src="static/img/hospital.png" width="100" ng-mouseover="ctrl.changeMessage('hospital')" ng-mouseout="ctrl.resetMessage()"/></a>
                         </div>
                         <!-- END LAYER -->
 
@@ -71,7 +93,8 @@
                         data-captionhidden="off"
                         style="z-index: 6">
                         <!-- <a href="#" class="btn-u btn-u-lg re-btn-brd margin-right-5">Read About Us</a> -->
-                        <img src="static/img/calender.png" width="100"/>
+                        <a href="#">
+                        <img class="features" src="static/img/calender.png" width="100" ng-mouseover="ctrl.changeMessage('appointment')" ng-mouseout="ctrl.resetMessage()"/></a>
                         <!-- <a href="#" class="btn-u btn-u-lg">Visit Our Work</a> -->
                         </div>
 
@@ -86,8 +109,9 @@
                         data-endeasing="Power1.easeIn"
                         data-captionhidden="off"
                         style="z-index: 6">
-                        <!-- <a href="#" class="btn-u btn-u-lg re-btn-brd margin-right-5">Read About Us</a> -->
-                        <img src="static/img/transport.png" width="100"/>
+                        <a href="#">
+                        <img id="image" src="static/img/hotel.png" width="100" ng-mouseover="ctrl.changeMessage('hotel')" ng-mouseout="ctrl.resetMessage()"/></a>
+                     
                         <!-- <a href="#" class="btn-u btn-u-lg">Visit Our Work</a> -->
                         </div>
 
@@ -103,7 +127,8 @@
                         data-captionhidden="off"
                         style="z-index: 6">
                         <!-- <a href="#" class="btn-u btn-u-lg re-btn-brd margin-right-5">Read About Us</a> -->
-                        <img src="static/img/hotel.png" width="100"/>
+                        <a href="#">
+                        <img id="image" src="static/img/transport.png" width="100" ng-mouseover="ctrl.changeMessage('transport')" ng-mouseout="ctrl.resetMessage()"/></a>
                         <!-- <a href="#" class="btn-u btn-u-lg">Visit Our Work</a> -->
                         </div>
 
@@ -119,7 +144,8 @@
                         data-captionhidden="off"
                         style="z-index: 6">
                         <!-- <a href="#" class="btn-u btn-u-lg re-btn-brd margin-right-5">Read About Us</a> -->
-                        <img src="static/img/care.png" width="100"/>
+                        <a href="#">
+                        <img id="image" src="static/img/care.png" width="100" ng-mouseover="ctrl.changeMessage('care')" ng-mouseout="ctrl.resetMessage()"/></a>
                         <!-- <a href="#" class="btn-u btn-u-lg">Visit Our Work</a> -->
                         </div>
 
@@ -136,7 +162,7 @@
                         style="z-index: 6">
                         <a href="#" class="btn-u btn-u-lg re-btn-brd margin-right-5">Query</a>
                         <!-- <img src="static/img/care.png" width="100"/> -->
-                        <a href="#" class="btn-u btn-u-lg">Visit Our Work</a>
+                        <a href="#" class="btn-u btn-u-lg">Why Us</a>
                         </div>
 
                     </li>
