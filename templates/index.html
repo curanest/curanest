@@ -77,7 +77,12 @@
                         data-captionhidden="off"
                         style="z-index: 6">
                         <a href="#">
-                        <img class="features" src="static/img/hospital.png" width="100" ng-mouseover="ctrl.changeMessage('hospital')" ng-mouseout="ctrl.resetMessage()"/></a>
+                        {% angularjs %}
+                        <div id="divID" ng-init="imgsrc='static/img/hospital-2.png'" ng-mouseover="imgsrc='static/img/hospital-1.png'; ctrl.changeMessage('hospital')" ng-mouseout="imgsrc='static/img/hospital-2.png'; ctrl.resetMessage()">
+                        <img ng-src="{{imgsrc}}" style="width:100px"/>
+                        </div>
+                        {% endangularjs %}
+                        </a>
                         </div>
                         <!-- END LAYER -->
 
@@ -94,8 +99,12 @@
                         style="z-index: 6">
                         <!-- <a href="#" class="btn-u btn-u-lg re-btn-brd margin-right-5">Read About Us</a> -->
                         <a href="#">
-                        <img class="features" src="static/img/calender.png" width="100" ng-mouseover="ctrl.changeMessage('appointment')" ng-mouseout="ctrl.resetMessage()"/></a>
-                        <!-- <a href="#" class="btn-u btn-u-lg">Visit Our Work</a> -->
+                        {% angularjs %}
+                        <div id="divID" ng-init="imgsrc2='static/img/calender-2.png'" ng-mouseover="imgsrc2='static/img/calender-1.png'; ctrl.changeMessage('appointment')" ng-mouseout="imgsrc2='static/img/calender-2.png'; ctrl.resetMessage()">
+                        <img ng-src="{{imgsrc2}}" style="width:100px"/> 
+                        </div>
+                        {% endangularjs %}
+                        </a> 
                         </div>
 
                         <div class="tp-caption sft"
@@ -110,9 +119,12 @@
                         data-captionhidden="off"
                         style="z-index: 6">
                         <a href="#">
-                        <img id="image" src="static/img/hotel.png" width="100" ng-mouseover="ctrl.changeMessage('hotel')" ng-mouseout="ctrl.resetMessage()"/></a>
-                     
-                        <!-- <a href="#" class="btn-u btn-u-lg">Visit Our Work</a> -->
+                        {% angularjs %}
+                        <div id="divID" ng-init="imgsrc3='static/img/hotel-2.png'" ng-mouseover="imgsrc3='static/img/hotel-1.png'; ctrl.changeMessage('hotel')" ng-mouseout="imgsrc3='static/img/hotel-2.png'; ctrl.resetMessage()">
+                        <img ng-src="{{imgsrc3}}" style="width:100px"/>
+                        </div>
+                        {% endangularjs %}
+                        </a>
                         </div>
 
                         <div class="tp-caption sft"
@@ -128,7 +140,12 @@
                         style="z-index: 6">
                         <!-- <a href="#" class="btn-u btn-u-lg re-btn-brd margin-right-5">Read About Us</a> -->
                         <a href="#">
-                        <img id="image" src="static/img/transport.png" width="100" ng-mouseover="ctrl.changeMessage('transport')" ng-mouseout="ctrl.resetMessage()"/></a>
+                        {% angularjs %}
+                        <div id="divID" ng-init="imgsrc4='static/img/transport-2.png'" ng-mouseover="imgsrc4='static/img/transport-1.png'; ctrl.changeMessage('transport')" ng-mouseout="imgsrc4='static/img/transport-2.png'; ctrl.resetMessage()">
+                        <img ng-src="{{imgsrc4}}" style="width:100px"/>
+                        </div>
+                        {% endangularjs %}
+                        </a>
                         <!-- <a href="#" class="btn-u btn-u-lg">Visit Our Work</a> -->
                         </div>
 
@@ -145,7 +162,12 @@
                         style="z-index: 6">
                         <!-- <a href="#" class="btn-u btn-u-lg re-btn-brd margin-right-5">Read About Us</a> -->
                         <a href="#">
-                        <img id="image" src="static/img/care.png" width="100" ng-mouseover="ctrl.changeMessage('care')" ng-mouseout="ctrl.resetMessage()"/></a>
+                        {% angularjs %}
+                        <div id="divID" ng-init="imgsrc5='static/img/care-2.png'" ng-mouseover="imgsrc5='static/img/care-1.png'; ctrl.changeMessage('care')" ng-mouseout="imgsrc5='static/img/care-2.png'; ctrl.resetMessage()">
+                        <img ng-src="{{imgsrc5}}" style="width:100px"/>
+                        </div>
+                        {% endangularjs %}
+                        </a>
                         <!-- <a href="#" class="btn-u btn-u-lg">Visit Our Work</a> -->
                         </div>
 

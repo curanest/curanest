@@ -42,7 +42,7 @@ body.dark .headline-v2.bg-color-light {
 
 /*Parallax Backgrounds
 ------------------------------------*/
-/*body.dark .parallax-bg {
+body.dark .parallax-bg {
 	background-color: #333;
 }
 
@@ -58,7 +58,7 @@ body.dark .tp-bannertimer {
 
 body.dark .tp-banner-container .btn-u.btn-brd.btn-u-light {
   color: #fff;
-}*/
+}
 
 /*Header
 ------------------------------------*/
