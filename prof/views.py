@@ -289,8 +289,11 @@ def register(request,usertype):
               #profile.set_usertype('patient')
            else:
               print 'Invalid URL'
+        else:
+            print 'Error Code'
+            return render(request, 'done.html', {}) 
 
-           return render(request, 'register_done.html', {'new_user': new_user})    
+        return render(request, 'register_done.html', {'new_user': new_user})    
     else:        
         user_form = UserRegistrationForm()    
         return render(request,'register.html',{'user_form': user_form}) 

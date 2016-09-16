@@ -36,6 +36,8 @@
 	<link rel="stylesheet" href="static/css/header-v6.css">
 	<link rel="stylesheet" href="static/css/footer-v1.css">
 
+
+
 	<!-- CSS Implementing Plugins -->
 	<!-- <link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/plugins/animate.css"> -->
 	<!-- <link rel="stylesheet" href="static/css/line-icons.css"> -->
@@ -60,6 +62,7 @@
        	self.message2 = 'We will help you with the rest';
 
         self.resetMessage = function(){
+        	    console.log("Test");
         	    self.message1 = 'Take care of yourself,';
        	        self.message2 = 'We will help you with the rest';
         }
@@ -87,6 +90,17 @@
        	}
        });
     </script>
+    <style type="text/css">
+    .feature-detail{
+    	font-family: 'Open Sans', sans-serif; 
+    	line-height: 130%;
+    	letter-spacing: 2px; 
+    	font-size:1.2em;
+    }
+    .pointer:hover{
+    	cursor: pointer;
+    }
+    </style>
 </head>
 
 <body class="header-fixed" ng-controller="MainCtrl as ctrl">
@@ -106,10 +120,9 @@
 						</button>
 
 						<!-- Navbar Brand -->
-						<div class="navbar-brand brand-name">
-							<a href="index.html">
+						
+						<div class="navbar-brand brand-name pointer">
 								<img src="{% static "img/curanestlogo.png" %}" alt="Logo"><span style="color:#7CC5E3; font-family: 'Josefin Slab', serif;font-size:1.4em; font-weight: bold;"><span style="color:#5F99B0">cura</span>Nest</span>
-							</a>
 						</div>
 						<!-- ENd Navbar Brand -->
 					</div>
@@ -246,7 +259,7 @@
 					<div class="thumbnails-v1">
 						
 						<div class="caption">
-							<h3><a href="#">Engage Customers With Curanest</a></h3>
+							<h2 class="title-v2">Explore Hospitals</h2>
 							<p><a class="read-more" href="#">See More</a></p>
 						</div>
 					</div>
@@ -282,7 +295,7 @@
 					<div class="thumbnails-v1">
 						
 						<div class="caption">
-							<h3><a href="#">Engage Customers With Curanest</a></h3>
+							<h2 class="title-v2">Appointment</h2>
 							<p><a class="read-more" href="#">See More</a></p>
 						</div>
 					</div>
@@ -323,8 +336,9 @@
 					<div class="thumbnails-v1">
 						
 						<div class="caption">
-							<h3><a href="#">Engage Customers With Curanest</a></h3>
-							<p><a class="read-more" href="#">See More</a></p>
+							<h2 class="title-v2">Travel & Transport</h2>
+							<div class="feature-detail"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;Plan Travel</div>
+							<div class="feature-detail"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;Book Tickets</div>
 						</div>
 					</div>
 				</div>
@@ -359,7 +373,7 @@
 					<div class="thumbnails-v1">
 						
 						<div class="caption">
-							<h3><a href="#">Engage Customers With Curanest</a></h3>
+							<h2 class="title-v2">Stay</h2>
 							<p><a class="read-more" href="#">See More</a></p>
 						</div>
 					</div>
@@ -378,7 +392,7 @@
 					<div class="thumbnails-v1">
 						
 						<div class="caption">
-							<h3><a href="#">Engage Customers With Curanest</a></h3>
+							<h2 class="title-v2">Attendent & Support</h2>
 							<p><a class="read-more" href="#">See More</a></p>
 						</div>
 					</div>
