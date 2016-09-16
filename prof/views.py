@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
 from django.forms import inlineformset_factory
@@ -293,14 +293,13 @@ def register(request,usertype):
             print 'Error Code'
             return render(request, 'done.html', {}) 
 
-        return render(request, 'register_done.html', {'new_user': new_user})    
+        return redirect('http://www.curanest.com')    
     else:        
-        user_form = UserRegistrationForm()    
+        user_form = UserRegistrationForm()
+        #return redirect('/')    
         return render(request,'register.html',{'user_form': user_form}) 
 
 def dashboard(request):
-    #pp = AgentProfile(user=request.user)
-    #print pp.queries
     return render(request,'index.html',locals())
 
 @user_passes_test(lambda u: u.is_superuser)
