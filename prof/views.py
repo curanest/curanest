@@ -271,7 +271,6 @@ def register(request,usertype):
     print usertype 
     if request.method == 'POST':        
         user_form = UserRegistrationForm(request.POST)  
-        print user_form
      
         if user_form.is_valid():           
            # Create a new user object but avoid saving it yet            
