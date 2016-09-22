@@ -93,3 +93,18 @@ select::-ms-expand {
   border-top: solid 1px #fff;
   border-bottom: solid 1px #fff;
 }
+
+.footer .footer-social li {
+  padding: 0px; }
+  .footer .footer-social li a {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
+    margin: 3px 5px; }
+    .footer .footer-social li a:hover {
+      color: #fff; }
+
+    .footer.light .footer-social li a {
+      color: #777; }
+      .footer.light .footer-social li a:hover {
+        color: #209b60; }
