@@ -398,4 +398,6 @@ def ratings_vote(request):
 
 def aboutus(request):
     return render(request,'aboutus.html',locals())
-    
+
+def footerchk(request):
+    return render(request,'footer.html',locals())
