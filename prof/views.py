@@ -395,3 +395,7 @@ def ratings_vote(request):
 #     queryset = AgentQuery.objects.all()
 #     print queryset
 #     serializer_class = AgentQuerySerializers
+
+def aboutus(request):
+    return render(request,'aboutus.html',locals())
+    
