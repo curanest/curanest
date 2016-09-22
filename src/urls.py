@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^query/$', profviews.query, name='query'),
+    url(r'^aboutus/$', profviews.aboutus, name='aboutus'),
     url(r'^agentquery/$', profviews.agentquery, name='agent_query'),
     url(r'^query/(?P<hospital>\w+)/$', profviews.query, name='query'),
     #url(r'^query/(?P<hospital>\w+)/', profviews.query, name='query_o'),

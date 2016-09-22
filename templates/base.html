@@ -210,10 +210,10 @@
 		{% block content %}
         {% endblock %}
 	
-	    <div class="bg-grey content-sm">
+	    <div class="bg-grey content-sm" id="videos">
 	    <div class="container">
 		<div class="text-center margin-bottom-50">
-		<h2 class="title-v2 title-center">Videos</h2>
+		<h2 class="title-v2 title-center">More on What we Do</h2>
 		</div>
 
         <div class="row">
@@ -224,7 +224,7 @@
 						</div>
 						<div class="caption">
 							<h3><a href="#">English</a></h3>
-							<p>If you are going to use a passage of Lorem Ipsum, you need to be</p>
+							<p>Find out how curaNest can help you.</p>
 							<p><a class="read-more" href="#">See More</a></p>
 						</div>
 					</div>
@@ -236,7 +236,7 @@
 						</div>
 						<div class="caption">
 							<h3><a href="#">Hindi</a></h3>
-							<p>If you are going to use a passage of Lorem Ipsum, you need to be</p>
+							<p>Find out how curaNest can help you.</p>
 							<p><a class="read-more" href="#">See More</a></p>
 						</div>
 						
@@ -657,9 +657,9 @@
 						<div class="col-md-3 md-margin-bottom-40">
 							<div class="headline"><h2>Useful Links</h2></div>
 							<ul class="list-unstyled link-list">
-								<li><a href="#">About us</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="{% url "aboutus" %}">About us</a><i class="fa fa-angle-right"></i></li>
 								<li><a href="#">Careers</a><i class="fa fa-angle-right"></i></li>
-								<li><a href="#">Contact us</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="{% url "contactus" %}">Contact us</a><i class="fa fa-angle-right"></i></li>
 							</ul>
 						</div><!--/col-md-3-->
 						<!-- End Link List -->
