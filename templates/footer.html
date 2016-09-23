@@ -56,7 +56,54 @@
 <body>
 	   		<!--=== Footer Version 1 ===-->
 		<div class="footer-v1">
-			
+
+			<div class="footer">
+				<div class="container">
+					<div class="row">
+						<!-- About -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<a href="index.html"><img id="logo-footer" class="footer-logo" src="{% static "img/curanestlogo.png" %}" alt="" width="100"></a>
+							<br>
+							<span style="color:#7CC5E3; font-family: 'Josefin Slab', serif;font-size:1.4em; font-weight: bold;">Take care of yourself<br>Let us help with the rest</span>
+						</div><!--/col-md-3-->
+						<!-- End About -->
+
+						<!-- Latest -->
+ 						<div class="col-md-3 md-margin-bottom-40">
+							<div class="posts">
+								
+							</div>
+						</div> 
+						
+
+						<!-- Link List -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<div class="headline"><h2>Useful Links</h2></div>
+							<ul class="list-unstyled link-list">
+                                                        <li><a href="{% url "aboutus" %}">About us</a><i class="fa fa-angle-right"></i></li>
+                                                        <li><a href="{% url "aboutus" %}">Careers</a><i class="fa fa-angle-right"></i></li>
+                                                        <li><a href="{% url "contactus" %}">Contact us</a><i class="fa fa-angle-right"></i></li>
+
+							</ul>
+						</div><!--/col-md-3-->
+						<!-- End Link List -->
+
+						<!-- Address -->
+						<div class="col-md-3 map-img md-margin-bottom-40">
+							<div class="headline"><h2>Contact Us</h2></div>
+							<address class="md-margin-bottom-40">
+								2471, 4th B Main, 2nd Cross <br />
+								Vimanapura, Bangalore - 560017 <br/>
+								Karnataka, INDIA <br />
+								Phone: +91 7022251144 <br />
+								Email: <a href="mailto:curanest@gmail.com" class="">curanest@gmail.com</a>
+							</address>
+						</div><!--/col-md-3-->
+						<!-- End Address -->
+					</div>
+				</div>
+			</div><!--/footer-->
+
 
 			<div class="copyright">
 				<div class="container">
