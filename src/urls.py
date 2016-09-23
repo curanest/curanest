@@ -4,6 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from prof import views as profviews
+from prof import views as footerchkviews
 #from prof import HospitalProfileView, SizesView
 from django.contrib.auth import views as auth_views
 
@@ -35,5 +36,6 @@ urlpatterns = [
     # url(r'^admin/', include(admin.site.urls)),
     url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
     #url(r'^ratings/', include('ratings.urls')),
+    url(r'^footerchk/$', profviews.footerchk, name='contactus'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
  

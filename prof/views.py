@@ -402,3 +402,5 @@ def aboutus(request):
 def tandc(request):
     return render(request,'termsandconditions.html',locals())
     
+def footerchk(request):
+    return render(request,'footer.html',locals())
