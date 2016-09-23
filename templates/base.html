@@ -69,24 +69,24 @@
         }
        	self.changeMessage = function(element){
        		if(element == 'hospital'){
-       			self.message1 = "Budget, Quality & Location";
-       			self.message2 = "We provide all options to choose from";
+       			self.message1 = "Compare and choose world class";
+       			self.message2 = "hospitals for all your tertiary care needs";
        		}
        		if(element == 'appointment'){
-       			self.message1 = "Can't afford waiting time";
-       			self.message2 = "We book all your appointments in advance";
+       			self.message1 = "save waiting time,";
+       			self.message2 = "book appointments";
        		}
        		if(element == 'hotel'){
-       			self.message1 = "Budget & Quality Stay";
-       			self.message2 = "We ensure that as well & near hospital";
+       			self.message1 = "book affordable places to stay";
+       			self.message2 = "in close proximity to your hospital";
        		}
        		if(element == 'transport'){
-       			self.message1 = "Needn't worry about transport";
-       			self.message2 = "Rail,Air & Cab - All booking done by us";
+       			self.message1 = "plan your travel,let us book ";
+       			self.message2 = "your tickets and arrange your travel in the city";
        		}
        		if(element == 'care'){
-       			self.message1 = "Help with hospital dealing";
-       			self.message2 = "CuraAttend always at service for you";
+       			self.message1 = "have our curaAssistant at your service to assist you";
+       			self.message2 = "from registration till you walk out of the hospital";
        		}
        	}
        });
@@ -138,6 +138,10 @@
 								</li> -->	
 								<!-- End Home -->
 								<!-- Features -->
+								    <li>
+									   <a href="{% url "dashboard" %}">Home</a>
+									</li>
+
 									<li>
 									   <a href="{% url "query" %}">Query</a>
 									</li>
@@ -634,113 +638,9 @@
 		</div>
 
 		<!--=== Footer Version 1 ===-->
-		<div class="footer-v1">
-			<div class="footer">
-				<div class="container">
-					<div class="row">
-						<!-- About -->
-						<div class="col-md-3 md-margin-bottom-40">
-							<a href="index.html"><img id="logo-footer" class="footer-logo" src="{% static "img/curanestlogo.png" %}" alt="" width="100"></a>
-							<br>
-							<span style="color:#7CC5E3; font-family: 'Josefin Slab', serif;font-size:1.4em; font-weight: bold;">Take care of yourself<br>Let us help you with the rest</span>
-						</div><!--/col-md-3-->
-						<!-- End About -->
-
-						<!-- Latest -->
- 						<div class="col-md-3 md-margin-bottom-40">
-							<div class="posts">
-								
-							</div>
-						</div> 
-						
-
-						<!-- Link List -->
-						<div class="col-md-3 md-margin-bottom-40">
-							<div class="headline"><h2>Useful Links</h2></div>
-							<ul class="list-unstyled link-list">
-								<li><a href="{% url "aboutus" %}">About us</a><i class="fa fa-angle-right"></i></li>
-								<li><a href="#">Careers</a><i class="fa fa-angle-right"></i></li>
-								<li><a href="{% url "contactus" %}">Contact us</a><i class="fa fa-angle-right"></i></li>
-							</ul>
-						</div><!--/col-md-3-->
-
-
-
-						<!-- End Link List -->
-
-						<!-- Address -->
-						<div class="col-md-3 map-img md-margin-bottom-40">
-							<div class="headline"><h2>Contact Us</h2></div>
-							<address class="md-margin-bottom-40">
-								2471, 4th B Main, 2nd Cross <br />
-								Vimanapura, Bangalore - 560017 <br/>
-								Karnataka, INDIA <br />
-								Phone: +91 7022251144 <br />
-								Email: <a href="mailto:curanest@gmail.com" class="">curanest@gmail.com</a>
-							</address>                        
-
-						</div><!--/col-md-3-->
-						<!-- End Address -->
-					</div>
-				</div>
-			</div><!--/footer-->
-
-			<div class="copyright">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<p>
-								2016 &copy; All Rights Reserved.
-								<a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-							</p>
-						</div>
-
-						<!-- Social Links -->
-						<div class="col-md-6">
-							<ul class="footer-socials list-inline">
-								<li>
-									<a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
-										<i class="fa fa-facebook"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
-										<i class="fa fa-skype"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
-										<i class="fa fa-google-plus"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
-										<i class="fa fa-linkedin"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest">
-										<i class="fa fa-pinterest"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
-										<i class="fa fa-twitter"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dribbble">
-										<i class="fa fa-dribbble"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<!-- End Social Links -->
-					</div>
-				</div>
-			</div><!--/copyright-->
-		</div>
+			
 		<!--=== End Footer Version 1 ===-->
+		{% include "footer.html" %} 
 	</div><!--/wrapper-->
 
 	
