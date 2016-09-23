@@ -36,6 +36,5 @@ urlpatterns = [
     # url(r'^admin/', include(admin.site.urls)),
     url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
     #url(r'^ratings/', include('ratings.urls')),
-    url(r'^footerchk/$', profviews.footerchk, name='contactus'),
+    url(r'^footerchk/$', profviews.footerchk, name='footerchk'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
- 

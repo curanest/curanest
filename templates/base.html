@@ -69,24 +69,24 @@
         }
        	self.changeMessage = function(element){
        		if(element == 'hospital'){
-       			self.message1 = "Budget, Quality & Location";
-       			self.message2 = "We provide all options to choose from";
+       			self.message1 = "Compare and choose world class";
+       			self.message2 = "hospitals for all your tertiary care needs";
        		}
        		if(element == 'appointment'){
-       			self.message1 = "Can't afford waiting time";
-       			self.message2 = "We book all your appointments in advance";
+       			self.message1 = "save waiting time,";
+       			self.message2 = "book appointments";
        		}
        		if(element == 'hotel'){
-       			self.message1 = "Budget & Quality Stay";
-       			self.message2 = "We ensure that as well & near hospital";
+       			self.message1 = "book affordable places to stay";
+       			self.message2 = "in close proximity to your hospital";
        		}
        		if(element == 'transport'){
-       			self.message1 = "Needn't worry about transport";
-       			self.message2 = "Rail,Air & Cab - All booking done by us";
+       			self.message1 = "plan your travel,let us book ";
+       			self.message2 = "your tickets and arrange your travel in the city";
        		}
        		if(element == 'care'){
-       			self.message1 = "Help with hospital dealing";
-       			self.message2 = "CuraAttend always at service for you";
+       			self.message1 = "have our curaAssistant at your service to assist you";
+       			self.message2 = "from registration till you walk out of the hospital";
        		}
        	}
        });
@@ -151,6 +151,10 @@
 								</li> -->	
 								<!-- End Home -->
 								<!-- Features -->
+								    <li>
+									   <a href="{% url "dashboard" %}">Home</a>
+									</li>
+
 									<li>
 									   <a href="{% url "query" %}">Query</a>
 									</li>
@@ -649,6 +653,9 @@
 		</div>
 -->
 		<!--=== Footer Version 1 ===-->
+<<<<<<< HEAD
+			
+=======
 		<div class="footer-v1">
 			<div class="footer">
 				<div class="container">
@@ -755,7 +762,9 @@
 				</div>
 			</div><!--/copyright-->
 		</div>
+>>>>>>> a90577baef0a6d0cab6ee3d72ba538ded941260f
 		<!--=== End Footer Version 1 ===-->
+		{% include "footer.html" %} 
 	</div><!--/wrapper-->
 
 	

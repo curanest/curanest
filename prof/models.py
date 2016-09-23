@@ -137,5 +137,4 @@ class SomeInfo(models.Model):
     message = models.TextField()
 
     def __unicode__(self):
-        return self.name + ' ' + self.message
-        
+        return self.name + ' ' + self.message      

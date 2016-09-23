@@ -15,9 +15,3 @@ class AgentQuerySerializers(serializers.ModelSerializer):
     class Meta:
         model = AgentQuery
         fields = '__all__'
-
-
-
-
-    
-
