@@ -92,12 +92,25 @@
        });
     </script>
     <style type="text/css">
-    .feature-detail{
+    @media only screen and (max-width:480px){
+     .feature-detail{
     	font-family: 'Open Sans', sans-serif; 
-    	line-height: 130%;
-    	letter-spacing: 2px; 
+    	line-height: 200%;
+    	letter-spacing: 1.2px; 
     	font-size:1.2em;
+     }
     }
+    @media only screen and (min-width:481px){
+     .feature-detail{
+        font-family: 'Open Sans', sans-serif;
+        line-height: 260%;
+        letter-spacing: 2px;
+        font-size: 2em;
+        font-weight:bold;
+     }
+    }
+
+
     .pointer:hover{
     	cursor: pointer;
     }
@@ -623,7 +636,7 @@
 				</li>
 			</ul>
 		</div> -->
-
+<!--
 		<div class="bg-grey content-sm">
 			<div class="container text-center">
 				<h2 class="title-v2 title-center">FIND MORE ABOUT US</h2>
@@ -632,7 +645,7 @@
 				<a href="#" class="btn-u">View Our Portfolio</a>
 			</div>
 		</div>
-
+-->
 		<!--=== Footer Version 1 ===-->
 		<div class="footer-v1">
 			<div class="footer">
@@ -659,7 +672,7 @@
 							<div class="headline"><h2>Useful Links</h2></div>
 							<ul class="list-unstyled link-list">
 								<li><a href="{% url "aboutus" %}">About us</a><i class="fa fa-angle-right"></i></li>
-								<li><a href="#">Careers</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="{% url "aboutus" %}">Careers</a><i class="fa fa-angle-right"></i></li>
 								<li><a href="{% url "contactus" %}">Contact us</a><i class="fa fa-angle-right"></i></li>
 							</ul>
 						</div><!--/col-md-3-->
@@ -691,7 +704,7 @@
 						<div class="col-md-6">
 							<p>
 								2016 &copy; All Rights Reserved.
-								<a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+								<a href="#">Privacy Policy</a> | <a href="{% url "tandc" %}">Terms of Service</a>
 							</p>
 						</div>
 

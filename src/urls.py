@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^query/$', profviews.query, name='query'),
     url(r'^aboutus/$', profviews.aboutus, name='aboutus'),
+    url(r'^termsandconditions/$', profviews.tandc, name='tandc'),
     url(r'^agentquery/$', profviews.agentquery, name='agent_query'),
     url(r'^query/(?P<hospital>\w+)/$', profviews.query, name='query'),
     #url(r'^query/(?P<hospital>\w+)/', profviews.query, name='query_o'),
