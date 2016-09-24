@@ -1,0 +1,170 @@
+{% load staticfiles %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<title>Curanest - With you Always</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Web Fonts -->
+	<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+
+	<!-- CSS Global Compulsory -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+
+	<link rel="stylesheet" href= "{% static "css/style.css" %}">
+
+	<!-- CSS Header and Footer -->
+	<link rel="stylesheet" href="{% static "css/header-v6.css" %}">
+	<link rel="stylesheet" href="{% static "css/footer-v1.css" %}">
+
+	<!-- CSS Implementing Plugins -->
+	<!-- <link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/plugins/animate.css"> -->
+	<!-- <link rel="stylesheet" href="static/css/line-icons.css"> -->
+	<!-- <link rel="stylesheet" href="http://htmlstream.com/preview/unify-v1.9.5/assets/plugins/font-awesome/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="{% static "css/settings.css" %}" type="text/css" media="screen">
+
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
+	<link rel="stylesheet" href="{% static "css/dark.css" %}">
+	
+</head>
+
+<body class="header-fixed" ng-controller="MainCtrl as ctrl">
+	<div class="wrapper">
+		<!--=== Header v6 ===-->
+		<div class="header-v6  header-sticky" style="background-color:#0069A2">
+			<!-- Navbar -->
+			<div class="navbar" role="navigation">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="menu-container">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+
+						<!-- Navbar Brand -->
+						<div class="navbar-brand brand-name">
+							<a href="#">
+								<img src="{% static "img/curanestlogo.png" %}" alt="Logo"><span style="color:#7CC5E3; font-family: 'Josefin Slab', serif;font-size:1.4em; font-weight: bold;"><span style="color:#5F99B0">cura</span>Nest</span>
+							</a>
+						</div>
+						
+						
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse navbar-responsive-collapse">
+						<div class="menu-container">
+							<ul class="nav navbar-nav">
+								<!-- Home -->
+								<!-- <li>
+									<a href="{% url "dashboard" %}">Home</a>
+								</li> -->	
+								<!-- End Home -->
+								<!-- Features -->
+								     <li>
+									   <a href="{% url "dashboard" %}">Home</a>
+									</li>
+
+									<li>
+									   <a href="{% url "query" %}">Query</a>
+									</li>
+									<!-- <li>
+									   <a href="{% url "hospitals" %}">Hospitals</a>
+									</li> -->
+									<li>
+									   <a href="{% url "contactus" %}">Contact</a>
+									</li>
+								<!-- End Features -->
+
+								<!-- Pages -->
+								{% if request.user.is_authenticated %}
+								<li class="dropdown">
+									<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+										{{request.user}}
+									</a>
+									<ul class="dropdown-menu">
+
+
+										<!-- Invoice Page -->
+										<li><a href="page_invoice.html">Invoice Page</a></li>
+										<!-- End Invoice Page -->
+
+										<!-- Clients Page -->
+										<li><a href="page_clients.html">Clients Page</a></li>
+										<!-- End Clients Page -->
+
+										<!-- Column Pages -->
+										<li><a href="page_3_columns.html">Three Columns Page</a></li>
+										<!-- End Column Pages -->
+
+										<!-- Privacy Policy -->
+										<li><a href="{% url "edit" %}">Edit Profile</a></li>
+										<!-- End Privacy Policy -->
+
+										<!-- Terms of Service -->
+										<li><a href="{% url "django.contrib.auth.views.logout" %}?next=/">Logout</a></li>
+										<!-- End Terms of Service -->
+
+										<!-- Sub Level Menu -->
+										
+									</ul>
+									{% else %}
+									<!-- <li>
+									    <a href="{% url "register" 'broker' %}"><b><u>HealthCare Agent</u></b></a>
+									</li> -->
+									<li>
+									    <a href="{% url "register" 'patient' %}">Get Started</a>
+									</li>
+									<li>
+									    <a href="{% url "login" %}">Login</a>
+									</li>
+								</li>
+								{% endif %}
+								<!-- End Pages -->
+
+
+							</ul>
+						</div>
+					</div><!--/navbar-collapse-->
+				</div>
+			</div>
+			<!-- End Navbar -->
+		</div>
+		<!--=== End Header v6 ===-->
+
+		
+
+	{% block content %}
+    {% endblock %}
+
+    {% include "footer.html" %} 
+	</div>
+	<link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+	<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>	
+</body>
+</html>
