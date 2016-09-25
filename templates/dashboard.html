@@ -1,7 +1,8 @@
 {% extends "base_all.html" %}
 {% block content %}
 <div class="container" style="padding-top:10%">
-<h1>Welcome to homepage</h1>
-      {{request.user}}
+<h1>Welcome {{request.user}}</h1>
+
+<a href="{% url "showqueries" %}">Show Past Queries</a>
 </div>
 {% endblock %}
