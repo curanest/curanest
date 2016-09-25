@@ -1,5 +1,10 @@
 /*Footer-v1
 ------------------------------------*/
+.footer-v1 {
+	position: fixed;
+	bottom:0;
+}
+
 .footer-v1 .footer {
 	padding: 40px 0;	
 	background: #272727;

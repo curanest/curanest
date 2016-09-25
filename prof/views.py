@@ -333,7 +333,7 @@ def contact_us(request):
             from_email = 'curanest@gmail.com'
             msg = EmailMultiAlternatives(subject, 'From ' + mobilenumber + ' ' + email + ' ' + message, from_email, ['curanest@gmail.com'])
             msg.send()
-            return render(request,'done.html',locals())
+            return render(request,'done_contact.html',locals())
         return render(request,'notdone.html',locals())
     else:
         form = ContactUsForm()
