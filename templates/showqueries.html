@@ -1,0 +1,28 @@
+<h1>Queries</h1>
+<div class="container" style:"padding=20%">
+
+{% for q in qry %}
+
+
+ {{ q.message }} : 
+  
+
+<br/>   
+
+<br/>
+{% endfor %}
+
+{% for i in img  %}
+<img src="/media/{{ i.photo }}" height="100px"></img>
+
+{% endfor %}
+
+
+</div>
+
+<!-- user = models.ForeignKey(PatientProfile,related_name='queries')
+    agent = models.ForeignKey(AgentProfile,related_name='agent_queries')
+    message = models.TextField()
+    hospital = models.ManyToManyField(HospitalProfile,through='HospitalQuery')
+     -->
+  {% include "footer.html" %}

@@ -404,3 +404,16 @@ def tandc(request):
     
 def footerchk(request):
     return render(request,'footer.html',locals())
+
+
+@login_required
+def showqueries(request):
+    nam=PatientProfile.objects.get(user=request.user)
+    print nam
+
+    qry = Query.objects.filter(user=nam)
+    print qry
+    img = QueryImages.objects.filter(query=qry)
+    print img
+    # img = QueryImages.objects.filter(id=query_id)
+    return render(request, 'showqueries.html', locals())
