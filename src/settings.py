@@ -130,7 +130,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 EMAIL_HOST = 'smtp.gmail.com' 
 EMAIL_HOST_USER = 'curanest@gmail.com' 
-EMAIL_HOST_PASSWORD = 'Armaan05' 
+EMAIL_HOST_PASSWORD = '*******' 
 EMAIL_PORT = 587 
 EMAIL_USE_TLS = True
 
